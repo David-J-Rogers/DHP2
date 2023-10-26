@@ -35,7 +35,6 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private boolean isValidCredentials(String username, String password) {
-        // Implement your login validation logic here
 
         if (username.equals("example") && password.equals("password")) {
             // Successful login

@@ -29,7 +29,6 @@ public class ExerciseActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // Handle the "Complete" button click event.
-                // Add your custom logic here.
 
                 // Create an intent to navigate back to the MainActivity
                 Intent intent = new Intent(ExerciseActivity.this, MainActivity.class);
