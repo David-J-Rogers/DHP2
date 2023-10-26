@@ -24,6 +24,10 @@
             android:name=".ExerciseActivity"
             android:label="Exercise Activity">
         </activity>
+        <activity
+            android:name=".AssessmentActivity"
+            android:label="Assessment Activity">
+        </activity>
 
 
 
