@@ -37,6 +37,7 @@ class MainActivity : AppCompatActivity() {
         val exerciseButton = findViewById<Button>(R.id.exercise1Button)
         val exerciseButton2 = findViewById<Button>(R.id.exercise2Button)
         val exerciseButton3 = findViewById<Button>(R.id.exercise3Button)
+        val asessmentButton = findViewById<Button>(R.id.assessButton)
 
         exerciseButton.setOnClickListener {
             val intent = Intent(this, ExerciseActivity::class.java)
@@ -47,6 +48,10 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
         exerciseButton3.setOnClickListener {
+            val intent = Intent(this, ExerciseActivity::class.java)
+            startActivity(intent)
+        }
+        asessmentButton.setOnClickListener {
             val intent = Intent(this, ExerciseActivity::class.java)
             startActivity(intent)
         }
