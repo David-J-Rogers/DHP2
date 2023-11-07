@@ -20,7 +20,6 @@ public class AssessmentActivity extends AppCompatActivity {
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // Handle the back button click event, e.g., go back to the previous activity or fragment.
                 finish();
             }
         });
@@ -28,13 +27,10 @@ public class AssessmentActivity extends AppCompatActivity {
         completeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // Handle the "Complete" button click event.
 
-                // Create an intent to navigate back to the MainActivity
                 Intent intent = new Intent(AssessmentActivity.this, MainActivity.class);
                 startActivity(intent);
 
-                // Finish the ExerciseActivity to remove it from the back stack
                 finish();
             }
         });

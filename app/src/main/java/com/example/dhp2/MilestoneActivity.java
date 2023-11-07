@@ -13,9 +13,8 @@ public class MilestoneActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_milestone); // Set the content view to the milestone layout
+        setContentView(R.layout.activity_milestone);
 
-        // Find and set click listeners for your milestone buttons
         Button exercise1Button = findViewById(R.id.exercise1Button);
         Button exercise2Button = findViewById(R.id.exercise2Button);
         Button exercise3Button = findViewById(R.id.exercise3Button);
