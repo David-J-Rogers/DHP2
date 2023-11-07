@@ -3,6 +3,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.widget.Button
+import android.widget.Toast
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.navigation.NavigationView
 import androidx.navigation.findNavController
@@ -28,32 +29,47 @@ class MainActivity : AppCompatActivity() {
         setSupportActionBar(binding.appBarMain.toolbar)
         supportActionBar?.title = "Hello, User" // Set a custom title
 
-
         binding.appBarMain.fab.setOnClickListener { view ->
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                     .setAction("Action", null).show()
         }
 
-        val exerciseButton = findViewById<Button>(R.id.exercise1Button)
-        val exerciseButton2 = findViewById<Button>(R.id.exercise2Button)
-        val exerciseButton3 = findViewById<Button>(R.id.exercise3Button)
-        val assessmentButton = findViewById<Button>(R.id.assessButton)
+        val exerciseManager = ExerciseManager.getInstance(this)
 
-        exerciseButton.setOnClickListener {
-            val intent = Intent(this, ExerciseActivity::class.java)
+        val milestone1Button = findViewById<Button>(R.id.milestone1Button)
+        val milestone2Button = findViewById<Button>(R.id.milestone2Button)
+        val milestone3Button = findViewById<Button>(R.id.milestone3Button)
+        val milestone4Button = findViewById<Button>(R.id.milestone4Button)
+
+        milestone1Button.setOnClickListener {
+            val intent = Intent(this, MilestoneActivity::class.java)
             startActivity(intent)
         }
-        exerciseButton2.setOnClickListener {
-            val intent = Intent(this, ExerciseActivity::class.java)
-            startActivity(intent)
+        milestone2Button.setOnClickListener {
+            if (exerciseManager.isExerciseUnlocked(2)) {
+                val exerciseNumber = 1
+                val intent = Intent(this, MilestoneActivity::class.java)
+                intent.putExtra("exerciseNumber", exerciseNumber)
+                startActivity(intent)
+            } else {
+                Toast.makeText(this, "Milestone 2 is locked.", Toast.LENGTH_SHORT).show()
+            }
         }
-        exerciseButton3.setOnClickListener {
-            val intent = Intent(this, ExerciseActivity::class.java)
-            startActivity(intent)
+        milestone3Button.setOnClickListener {
+            if (exerciseManager.isExerciseUnlocked(3)) {
+                val intent = Intent(this, MilestoneActivity::class.java)
+                startActivity(intent)
+            } else {
+                Toast.makeText(this, "Milestone 3 is locked.", Toast.LENGTH_SHORT).show()
+            }
         }
-        assessmentButton.setOnClickListener {
-            val intent = Intent(this, AssessmentActivity::class.java)
-            startActivity(intent)
+        milestone4Button.setOnClickListener {
+            if (exerciseManager.isExerciseUnlocked(4)) {
+                val intent = Intent(this, MilestoneActivity::class.java)
+                startActivity(intent)
+            } else {
+                Toast.makeText(this, "Milestone 4 is locked.", Toast.LENGTH_SHORT).show()
+            }
         }
 
 

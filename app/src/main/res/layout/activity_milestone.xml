@@ -23,42 +23,42 @@
 
     <!-- Add Exercise 1 Button -->
     <Button
-    android:id="@+id/milestone1Button"
-    android:layout_width="375dp"
-    android:layout_height="100dp"
-    app:layout_constraintTop_toTopOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    android:text="Milestone 1" />
+        android:id="@+id/exercise1Button"
+        android:layout_width="375dp"
+        android:layout_height="100dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Exercise 1" />
 
     <!-- Add Exercise 2 Button -->
     <Button
-    android:id="@+id/milestone2Button"
-    android:layout_width="375dp"
-    android:layout_height="100dp"
-    app:layout_constraintTop_toBottomOf="@id/milestone1Button"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    android:text="Milestone 2" />
+        android:id="@+id/exercise2Button"
+        android:layout_width="375dp"
+        android:layout_height="100dp"
+        app:layout_constraintTop_toBottomOf="@id/exercise1Button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Exercise 2" />
 
     <!-- Add Exercise 3 Button -->
     <Button
-    android:id="@+id/milestone3Button"
-    android:layout_width="375dp"
-    android:layout_height="100dp"
-    app:layout_constraintTop_toBottomOf="@id/milestone2Button"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    android:text="Milestone 3" />
-
-    <Button
-        android:id="@+id/milestone4Button"
+        android:id="@+id/exercise3Button"
         android:layout_width="375dp"
         android:layout_height="100dp"
-        app:layout_constraintTop_toBottomOf="@id/milestone3Button"
+        app:layout_constraintTop_toBottomOf="@id/exercise2Button"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:text="Milestone 4" />
+        android:text="Exercise 3" />
+
+    <Button
+        android:id="@+id/assessButton"
+        android:layout_width="375dp"
+        android:layout_height="100dp"
+        app:layout_constraintTop_toBottomOf="@id/exercise3Button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Assessment" />
 
 
 

@@ -16,11 +16,11 @@ public class ExerciseActivity extends AppCompatActivity {
 
         Button backButton = findViewById(R.id.backButton);
         Button completeButton = findViewById(R.id.completeButton);
+        int exerciseNumber = getIntent().getIntExtra("exerciseNumber", 1);
 
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // Handle the back button click event, e.g., go back to the previous activity or fragment.
                 finish();
             }
         });
@@ -28,13 +28,12 @@ public class ExerciseActivity extends AppCompatActivity {
         completeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // Handle the "Complete" button click event.
+                int nextExerciseNumber = exerciseNumber + 1;
+                ExerciseManager.unlockExercise(nextExerciseNumber);
 
-                // Create an intent to navigate back to the MainActivity
-                Intent intent = new Intent(ExerciseActivity.this, MainActivity.class);
+                Intent intent = new Intent(ExerciseActivity.this, MilestoneActivity.class);
                 startActivity(intent);
 
-                // Finish the ExerciseActivity to remove it from the back stack
                 finish();
             }
         });

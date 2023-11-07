@@ -28,6 +28,10 @@
             android:name=".AssessmentActivity"
             android:label="Assessment Activity">
         </activity>
+        <activity
+            android:name=".MilestoneActivity"
+            android:label="Milestone Activity">
+        </activity>
 
 
 
