@@ -61,7 +61,7 @@ public class MilestoneActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (exerciseManager.isExerciseUnlocked(4)) {
-                    Intent intent = new Intent(MilestoneActivity.this, ExerciseActivity.class);
+                    Intent intent = new Intent(MilestoneActivity.this, AssessmentActivity.class);
                     startActivity(intent);
                 } else {
                     Toast.makeText(MilestoneActivity.this, "Assessment is locked.", Toast.LENGTH_SHORT).show();

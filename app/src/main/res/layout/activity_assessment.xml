@@ -4,22 +4,52 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <!-- Exercise description and image -->
-    <ImageView
-        android:id="@+id/exerciseImageView"
+    <RadioGroup
+        android:id="@+id/assessmentRadioGroup"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:scaleType="centerCrop"
-        android:layout_alignParentTop="true"/>
+        android:layout_margin="20dp">
 
-    <TextView
-        android:id="@+id/exerciseDescriptionTextView"
+        <RadioButton
+        android:id="@+id/terribleRadioButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_marginTop="10dp"
+        android:text="Terrible" />
+
+        <RadioButton
+            android:id="@+id/badRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:layout_marginTop="10dp"
+            android:text="Bad" />
+
+        <RadioButton
+            android:id="@+id/goodRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:layout_marginTop="10dp"
+            android:text="Good" />
+
+        <RadioButton
+            android:id="@+id/greatRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:layout_marginTop="10dp"
+            android:text="Great" />
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/commentsEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/exerciseImageView"
-        android:text="ASSESSMENT GOES HERE"
-        android:textSize="16sp"
-        android:padding="16dp"/>
+        android:layout_below="@id/assessmentRadioGroup"
+        android:padding="16dp"
+        android:hint="Additional Comments" />
 
     <!-- Buttons -->
     <Button

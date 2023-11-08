@@ -22,15 +22,15 @@
 
         <activity
             android:name=".ExerciseActivity"
-            android:label="Exercise Activity">
+            android:label="">
         </activity>
         <activity
             android:name=".AssessmentActivity"
-            android:label="Assessment Activity">
+            android:label="How did you feel today?">
         </activity>
         <activity
             android:name=".MilestoneActivity"
-            android:label="Milestone Activity">
+            android:label="">
         </activity>
 
 

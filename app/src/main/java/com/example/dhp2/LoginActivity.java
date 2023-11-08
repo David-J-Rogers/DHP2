@@ -12,7 +12,7 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.login_page);  
+        setContentView(R.layout.login_page);
 
         EditText usernameEditText = findViewById(R.id.usernameEditText);
         EditText passwordEditText = findViewById(R.id.passwordEditText);
@@ -31,7 +31,7 @@ public class LoginActivity extends AppCompatActivity {
 
     private boolean isValidCredentials(String username, String password) {
 
-        if (username.equals("example") && password.equals("password")) {
+        if (username.equals("") && password.equals("")) {
             Intent intent = new Intent(LoginActivity.this, MainActivity.class);
             startActivity(intent);
 
