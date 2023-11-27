@@ -1,72 +1,87 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/questionTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Rate from 1-5 your pain/discomfort during the exercise with 5 being the highest"
+        android:textSize="20sp"
+        android:layout_marginBottom="16dp"/>
 
     <RadioGroup
         android:id="@+id/assessmentRadioGroup"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp">
+        android:layout_height="wrap_content">
 
         <RadioButton
-        android:id="@+id/terribleRadioButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="20sp"
-        android:layout_marginTop="10dp"
-        android:text="Terrible" />
-
-        <RadioButton
-            android:id="@+id/badRadioButton"
+            android:id="@+id/oneRadioButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="20sp"
-            android:layout_marginTop="10dp"
-            android:text="Bad" />
+            android:text="1" />
 
         <RadioButton
-            android:id="@+id/goodRadioButton"
+            android:id="@+id/twoRadioButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="20sp"
-            android:layout_marginTop="10dp"
-            android:text="Good" />
+            android:text="2" />
 
         <RadioButton
-            android:id="@+id/greatRadioButton"
+            android:id="@+id/threeRadioButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="20sp"
-            android:layout_marginTop="10dp"
-            android:text="Great" />
+            android:text="3" />
+
+        <RadioButton
+            android:id="@+id/fourRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="4" />
+
+        <RadioButton
+            android:id="@+id/fiveRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="5" />
     </RadioGroup>
 
     <EditText
         android:id="@+id/commentsEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/assessmentRadioGroup"
+        android:hint="Additional Comments"
         android:padding="16dp"
-        android:hint="Additional Comments" />
+        android:layout_marginBottom="16dp"/>
 
     <!-- Buttons -->
-    <Button
-        android:id="@+id/backButtonA"
-        android:layout_width="wrap_content"
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Back"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"
-        android:layout_margin="16dp" />
+        android:layout_marginTop="16dp">
 
-    <Button
-        android:id="@+id/completeButtonA"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Complete"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:layout_margin="16dp" />
-</RelativeLayout>
+        <Button
+            android:id="@+id/backButtonA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Back"
+            android:layout_alignParentStart="true"
+            android:layout_marginEnd="8dp"/>
+
+        <Button
+            android:id="@+id/completeButtonA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Complete"
+            android:layout_alignParentEnd="true"/>
+
+    </RelativeLayout>
+</LinearLayout>

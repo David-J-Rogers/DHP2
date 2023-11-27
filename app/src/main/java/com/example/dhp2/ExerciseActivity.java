@@ -45,7 +45,7 @@ public class ExerciseActivity extends AppCompatActivity {
                 int nextExerciseNumber = exerciseNumber + 1;
                 ExerciseManager.unlockExercise(nextExerciseNumber);
 
-                Intent intent = new Intent(ExerciseActivity.this, MilestoneActivity.class);
+                Intent intent = new Intent(ExerciseActivity.this, AssessmentActivity.class);
                 startActivity(intent);
 
                 finish();

@@ -45,7 +45,7 @@ public class AssessmentActivity extends AppCompatActivity {
 
                 milestoneManager.unlockMilestone(nextMilestoneNumber);
 
-                Intent intent = new Intent(AssessmentActivity.this, MainActivity.class);
+                Intent intent = new Intent(AssessmentActivity.this, MilestoneActivity.class);
                 startActivity(intent);
 
                 finish();

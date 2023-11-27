@@ -22,7 +22,7 @@ public class ExerciseManager {
         this.context = context;
         sharedPreferences = context.getSharedPreferences("ExerciseManager", Context.MODE_PRIVATE);
 
-        for (int i = 2; i <= 3; i++) {
+        for (int i = 2; i <= 4; i++) {
             sharedPreferences.edit().putBoolean("exercise" + i, false).apply();
         }
     }
@@ -52,7 +52,7 @@ public class ExerciseManager {
 
         int exercisesSize = allExercises.size();
         if (exercisesSize == 0) {
-            return -1; // Return -1 if there are no exercises in the milestone
+            return -1;
         }
 
         int randomIndex = random.nextInt(exercisesSize);

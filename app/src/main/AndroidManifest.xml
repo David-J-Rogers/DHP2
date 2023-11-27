@@ -26,7 +26,7 @@
         </activity>
         <activity
             android:name=".AssessmentActivity"
-            android:label="How did you feel today?">
+            android:label="">
         </activity>
         <activity
             android:name=".MilestoneActivity"

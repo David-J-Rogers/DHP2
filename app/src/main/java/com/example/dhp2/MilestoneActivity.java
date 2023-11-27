@@ -31,10 +31,13 @@ public class MilestoneActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (exerciseManager.isExerciseUnlocked(4)) {
-                    Intent intent = new Intent(MilestoneActivity.this, AssessmentActivity.class);
+                    Intent intent = new Intent(MilestoneActivity.this, ExerciseActivity.class);
+                    int randomExerciseNumber = exerciseManager.generateRandomExerciseForMilestone(milestoneNumber);
+                    intent.putExtra("exerciseNumber", 4);
+                    intent.putExtra("randomExerciseNumber", randomExerciseNumber);
                     startActivity(intent);
                 } else {
-                    Toast.makeText(MilestoneActivity.this, "Assessment is locked.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MilestoneActivity.this, "Exercise 4 is locked.", Toast.LENGTH_SHORT).show();
                 }
             }
         });
