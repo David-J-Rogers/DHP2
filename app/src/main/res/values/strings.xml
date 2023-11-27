@@ -10,4 +10,35 @@
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
+    <string name="exercise_description"> X </string>
+
+    <string name="exercise1_description">While lying down, move the foot up and down. This helps with circulation and reduces the risk of developing blood clots. Do it often, around every 5 to 10 minutes. Continue this for the entire recovery process.</string>
+    <string name="exercise2_description">Rotate your ankle towards your opposite foot and then away from it. Complete this rotation 5 times in each direction. Allocate about 3 minutes for this exercise. Aim for 3 to 4 sessions daily. </string>
+    <string name="exercise3_description">Activate your thigh muscle and attempt to straighten your knee. Hold this position for 5 to 10 seconds. During a 10-minute span, perform this 10 times, then rest for a minute before repeating. Continue until your thigh feels worn out. The exercise session should last around 2 minutes. </string>
+    <string name="exercise4_description">Squeeze the buttocks together and hold for 5 seconds. Do this 10 times, 3 times a day. </string>
+    <string name="exercise5_description">While lying down, slide the heel towards the buttocks by bending the knee. </string>
+    <string name="exercise6_description">While keeping your heel on the bed, draw your foot closer to your buttocks, bending your knee. Make sure your knee doesn\'t roll inward. Maintain the bent position for 5 to 10 seconds and then extend your leg. Do this 10 times, taking roughly 3 minutes. Repeat the exercise 3 to 4 times throughout the day. </string>
+    <string name="exercise7_description">Practice moving safely from the bed to a chair with assistance if needed. </string>
+    <string name="exercise8_description">Gently slide your leg to the side as wide as you can and then retract it. Perform this slide 10 times, which should take around 90 seconds. Do this routine 3 to 4 times daily. </string>
+    <string name="exercise9_description">While seated, straighten the operated leg and hold, then slowly lower over several seconds. Repeat 5 times or until your leg is fatigued. </string>
+    <string name="exercise10_description">With your leg outstretched on the bed, activate your thigh muscle. Elevate your leg a few inches off the bed. Keep it elevated for 5 to 10 seconds and then gradually lower it. Continue until you feel a burn in your thigh. This should take about 2 minutes. </string>
+    <string name="exercise11_description">While holding onto a stable surface, lift the operated leg forward without bending at the waist. Hold for 2 to 3 seconds, and repeat 10 times, 3 times a day. </string>
+    <string name="exercise12_description">Elevate your operated leg in the direction of your chest but don\'t raise your knee beyond your waistline. Sustain this raised position for 2 or 3 seconds before placing your leg down. Perform this 10 times in roughly 3 minutes. Aim for 3 to 4 sessions daily. </string>
+    <string name="exercise13_description">Slowly raise your operated leg backward while keeping your spine aligned. Retain this position for 2 or 3 seconds, then rest your foot. Complete this 10 times within 2 minutes. Do these 3 to 4 times daily. </string>
+    <string name="exercise14_description">Lift the operated leg out to the side, keeping the toes pointing forward. Repeat this exercise 10 times, 3 times a day. </string>
+    <string name="exercise15_description">Begin short, frequent walks, gradually increasing the distance. In the beginning, walking for 5 to 10 minutes 3 times a day is sufficient. Incrementally increase the number of steps each day, aiming to reach 50% of pre-surgery steps over a three-week period. </string>
+    <string name="exercise16_description">Holding onto a stable surface, lower into a shallow squat to a pain level not exceeding 3 on a 1-10 scale, maintain for a moment, and repeat for 2 sets of 10, once daily. </string>
+    <string name="exercise17_description">Stand on the operated leg only, holding onto a stable surface for support.  </string>
+    <string name="exercise18_description">Standing straight, move the operated leg backward while keeping the knee straight. Optionally, attach rubber stretch straps to the leg and to a solid surface.   </string>
+    <string name="exercise19_description">Step onto a 7-inch platform, repeating 10 times for each leg, ensuring knee alignment, twice daily. </string>
+    <string name="exercise20_description">Focus on proper technique, using handrails for support, and crutch if needed.</string>
+    <string name="exercise21_description">Perform shallow lunges, ensuring the operated knee doesn\'t move past the toes. </string>
+    <string name="exercise22_description">Engage in balance activities for 10 minutes, focusing on core strength, twice daily. Using tools like balance boards or Bosu balls is optional. </string>
+    <string name="exercise23_description">With your feet slightly apart, bring your operated leg forward, ensuring the knee remains straightened. Gradually revert your leg to its original position. Execute this 10 times, 4 sessions daily. Utilizing elastic resistance bands is optional but can intensify the exercise. </string>
+    <string name="exercise24_description">Stand adjacent to the door where the resistance band is fixed. Stretch your operated leg outwards. Gradually revert your leg to its starting position </string>
+    <string name="exercise25_description">Gradually reintroduce low-impact activities like stationary cycling or swimming. If cycling, adjust the seat so the bottom of your foot touches the pedal with your leg nearly straight. Slowly pedal backwards and work your way to pedaling forwards if comfortable. Do this exercise 10 to 15 minutes a day twice a day, and slowly work your way to 20 minutes to half hour 4 times a week. </string>
+    <string name="exercise26_description">Incorporate resistance exercises with bands or weights, progressing slowly. Monitor discomfort, tailor repetitions, and sets to patient\'s abilities. </string>
+    <string name="exercise27_description">Activities like squatting, pivoting, and more dynamic exercises can be introduced. </string>
+
+
 </resources>
