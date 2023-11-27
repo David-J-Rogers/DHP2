@@ -27,14 +27,14 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         setSupportActionBar(binding.appBarMain.toolbar)
-        supportActionBar?.title = "Hello, User" // Set a custom title
+        supportActionBar?.title = "Hello, User"
 
         binding.appBarMain.fab.setOnClickListener { view ->
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                     .setAction("Action", null).show()
         }
 
-        val exerciseManager = ExerciseManager.getInstance(this)
+        val milestoneManager = MilestoneManager.getInstance(this)
 
         val milestone1Button = findViewById<Button>(R.id.milestone1Button)
         val milestone2Button = findViewById<Button>(R.id.milestone2Button)
@@ -46,26 +46,30 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
         milestone2Button.setOnClickListener {
-            if (exerciseManager.isExerciseUnlocked(2)) {
-                val exerciseNumber = 1
+            if (milestoneManager.isMilestoneUnlocked(2)) {
+                val milestoneNumber = 1
                 val intent = Intent(this, MilestoneActivity::class.java)
-                intent.putExtra("exerciseNumber", exerciseNumber)
+                intent.putExtra("milestoneNumber", milestoneNumber)
                 startActivity(intent)
             } else {
                 Toast.makeText(this, "Milestone 2 is locked.", Toast.LENGTH_SHORT).show()
             }
         }
         milestone3Button.setOnClickListener {
-            if (exerciseManager.isExerciseUnlocked(3)) {
+            if (milestoneManager.isMilestoneUnlocked(3)) {
+                val milestoneNumber = 2
                 val intent = Intent(this, MilestoneActivity::class.java)
+                intent.putExtra("milestoneNumber", milestoneNumber)
                 startActivity(intent)
             } else {
                 Toast.makeText(this, "Milestone 3 is locked.", Toast.LENGTH_SHORT).show()
             }
         }
         milestone4Button.setOnClickListener {
-            if (exerciseManager.isExerciseUnlocked(4)) {
+            if (milestoneManager.isMilestoneUnlocked(4)) {
+                val milestoneNumber = 3
                 val intent = Intent(this, MilestoneActivity::class.java)
+                intent.putExtra("milestoneNumber", milestoneNumber)
                 startActivity(intent)
             } else {
                 Toast.makeText(this, "Milestone 4 is locked.", Toast.LENGTH_SHORT).show()
@@ -77,8 +81,7 @@ class MainActivity : AppCompatActivity() {
         val drawerLayout: DrawerLayout = binding.drawerLayout
         val navView: NavigationView = binding.navView
         val navController = findNavController(R.id.nav_host_fragment_content_main)
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
+
         appBarConfiguration = AppBarConfiguration(setOf(
             R.id.nav_home), drawerLayout)
         setupActionBarWithNavController(navController, appBarConfiguration)
@@ -86,7 +89,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        // Inflate the menu; this adds items to the action bar if it is present.
         menuInflater.inflate(R.menu.main, menu)
         return true
     }
