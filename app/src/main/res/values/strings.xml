@@ -7,10 +7,8 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
-    <string name="menu_home">Home</string>
-    <string name="menu_gallery">Gallery</string>
-    <string name="menu_slideshow">Slideshow</string>
-    <string name="exercise_description"> X </string>
+    <string name="menu_home">Milestones</string>
+
 
     <string name="exercise1_description">While lying down, move the foot up and down. This helps with circulation and reduces the risk of developing blood clots. Do it often, around every 5 to 10 minutes. Continue this for the entire recovery process.</string>
     <string name="exercise2_description">Rotate your ankle towards your opposite foot and then away from it. Complete this rotation 5 times in each direction. Allocate about 3 minutes for this exercise. Aim for 3 to 4 sessions daily. </string>

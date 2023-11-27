@@ -22,7 +22,7 @@ public class ExerciseManager {
         this.context = context;
         sharedPreferences = context.getSharedPreferences("ExerciseManager", Context.MODE_PRIVATE);
 
-        for (int i = 2; i <= 4; i++) {
+        for (int i = 2; i <= 2; i++) {
             sharedPreferences.edit().putBoolean("exercise" + i, false).apply();
         }
     }
