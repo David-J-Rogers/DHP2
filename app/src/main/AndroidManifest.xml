@@ -38,6 +38,10 @@
             android:label="">
         </activity>
 
+        <activity
+            android:name=".AchievementActivity"
+            android:label="Achievements">
+        </activity>
 
         <activity
             android:name=".MainActivity"

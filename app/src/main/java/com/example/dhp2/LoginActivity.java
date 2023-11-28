@@ -17,7 +17,6 @@ import com.google.android.gms.common.api.ApiException;
 import android.view.View;
 
 
-
 public class LoginActivity extends AppCompatActivity {
     private static final int RC_SIGN_IN = 9001;
     private GoogleSignInClient mGoogleSignInClient;

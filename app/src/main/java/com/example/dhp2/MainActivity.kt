@@ -1,6 +1,7 @@
 package com.example.dhp2
 import android.annotation.SuppressLint
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.util.Log
 import android.view.Menu
@@ -33,8 +34,10 @@ class MainActivity : AppCompatActivity() {
         supportActionBar?.title = "Hello, User"
 
         binding.appBarMain.fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                    .setAction("Action", null).show()
+            val emergencyNumber = "tel:911"
+
+            val dialIntent = Intent(Intent.ACTION_DIAL, Uri.parse(emergencyNumber))
+            startActivity(dialIntent)
         }
 
         val milestoneManager = MilestoneManager.getInstance(this)
@@ -50,7 +53,7 @@ class MainActivity : AppCompatActivity() {
         }
         milestone2Button.setOnClickListener {
             if (milestoneManager.isMilestoneUnlocked(2)) {
-                val milestoneNumber = 1
+                val milestoneNumber = 2
                 val intent = Intent(this, MilestoneActivity::class.java)
                 intent.putExtra("milestoneNumber", milestoneNumber)
                 startActivity(intent)
@@ -60,7 +63,7 @@ class MainActivity : AppCompatActivity() {
         }
         milestone3Button.setOnClickListener {
             if (milestoneManager.isMilestoneUnlocked(3)) {
-                val milestoneNumber = 2
+                val milestoneNumber = 3
                 val intent = Intent(this, MilestoneActivity::class.java)
                 intent.putExtra("milestoneNumber", milestoneNumber)
                 startActivity(intent)
@@ -70,7 +73,7 @@ class MainActivity : AppCompatActivity() {
         }
         milestone4Button.setOnClickListener {
             if (milestoneManager.isMilestoneUnlocked(4)) {
-                val milestoneNumber = 3
+                val milestoneNumber = 4
                 val intent = Intent(this, MilestoneActivity::class.java)
                 intent.putExtra("milestoneNumber", milestoneNumber)
                 startActivity(intent)
@@ -89,6 +92,22 @@ class MainActivity : AppCompatActivity() {
             R.id.nav_home), drawerLayout)
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+
+        navView.setNavigationItemSelectedListener { menuItem ->
+            when (menuItem.itemId) {
+                R.id.nav_home -> {
+                    val intent = Intent(this, MainActivity::class.java)
+                    startActivity(intent)
+                }
+                R.id.nav_achievements -> {
+                    val intent = Intent(this, AchievementActivity::class.java)
+                    startActivity(intent)
+                }
+            }
+            drawerLayout.closeDrawers()
+            true
+        }
+
 
         //DBTesting
         //setContentView(R.layout.activity_main);
