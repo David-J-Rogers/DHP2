@@ -111,7 +111,7 @@ class MainActivity : AppCompatActivity() {
         val dbHelper = DBHelper(this)
 
         // Insert a test record
-        dbHelper.addPatient(30, "2023-11-24", 0.8, 0.9, 0.85, 0.9)
+        dbHelper.addPatient("test", "test", 30, "2023-11-24", 0.8, 0.9, 0.85, 0.9)
         Log.d("DBTest", "Insertion completed")
 
         // Read the inserted record

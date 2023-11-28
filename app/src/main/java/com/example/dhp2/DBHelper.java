@@ -17,6 +17,8 @@ import android.database.Cursor;
         @Override
         public void onCreate(SQLiteDatabase db) {
             String CREATE_TABLE = "CREATE TABLE PatientData (" +
+                    "username TEXT," +
+                    "password TEXT," +
                     "id INTEGER PRIMARY KEY AUTOINCREMENT," +
                     "age INTEGER," +
                     "time_of_surgery TEXT," +
@@ -35,9 +37,11 @@ import android.database.Cursor;
         }
 
         //insert
-        public void addPatient(int age, String timeOfSurgery, double m1, double m2, double m3, double m4) {
+        public void addPatient(String username, String password, int age, String timeOfSurgery, double m1, double m2, double m3, double m4) {
             SQLiteDatabase db = this.getWritableDatabase();
             ContentValues values = new ContentValues();
+            values.put("username", username);
+            values.put("password", password);
             values.put("age", age);
             values.put("time_of_surgery", timeOfSurgery);
             values.put("milestone_one_completion_factor", m1);
