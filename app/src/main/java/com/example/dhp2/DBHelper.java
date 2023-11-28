@@ -17,9 +17,9 @@ import android.database.Cursor;
         @Override
         public void onCreate(SQLiteDatabase db) {
             String CREATE_TABLE = "CREATE TABLE PatientData (" +
-                    "username TEXT," +
+                    "username TEXT PRIMARY KEY," +
                     "password TEXT," +
-                    "id INTEGER PRIMARY KEY AUTOINCREMENT," +
+                    "id INTEGER," +
                     "age INTEGER," +
                     "time_of_surgery TEXT," +
                     "milestone_one_completion_factor REAL," +
@@ -54,9 +54,9 @@ import android.database.Cursor;
         }
 
         //read
-        public Cursor getPatient(int id) {
-            SQLiteDatabase db = this.getReadableDatabase();
-            Cursor cursor = db.query("PatientData", new String[]{"age", "time_of_surgery", "milestone_one_completion_factor", "milestone_two_completion_factor", "milestone_three_completion_factor", "milestone_four_completion_factor"}, "id = ?", new String[]{String.valueOf(id)}, null, null, null);
+        public Cursor getPatient(String username) {
+            SQLiteDatabase db = this.getWritableDatabase();
+            Cursor cursor = db.query("PatientData", new String[]{"username", "password", "id", "age", "time_of_surgery", "milestone_one_completion_factor", "milestone_two_completion_factor", "milestone_three_completion_factor", "milestone_four_completion_factor"}, "username = ?", new String[]{String.valueOf(username)}, null, null, null, null);
             if (cursor != null)
                 cursor.moveToFirst();
             return cursor;

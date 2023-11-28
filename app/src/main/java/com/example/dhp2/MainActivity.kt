@@ -115,7 +115,7 @@ class MainActivity : AppCompatActivity() {
         Log.d("DBTest", "Insertion completed")
 
         // Read the inserted record
-        val cursor = dbHelper.getPatient(1)
+        val cursor = dbHelper.getPatient("test")
         if (cursor != null && cursor.moveToFirst()) {
             val patientData = "Age: " + cursor.getInt(cursor.getColumnIndex("age")) +
                     ", Time of Surgery: " + cursor.getString(cursor.getColumnIndex("time_of_surgery")) +
