@@ -4,43 +4,47 @@
         "source": "com.example.dhp2.app-main-54:/layout/app_bar_main.xml"
     },
     {
-        "merged": "com.example.dhp2.app-mergeDebugResources-51:/layout/activity_sign_up.xml",
-        "source": "com.example.dhp2.app-main-54:/layout/activity_sign_up.xml"
+        "merged": "/Users/davidrogers/.gradle/daemon/8.0/com.example.dhp2.app-mergeDebugResources-51:/layout/app_bar_main.xml",
+        "source": "/Users/davidrogers/.gradle/daemon/8.0/com.example.dhp2.app-main-54:/layout/app_bar_main.xml"
     },
     {
-        "merged": "com.example.dhp2.app-mergeDebugResources-51:/layout/nav_header_main.xml",
-        "source": "com.example.dhp2.app-main-54:/layout/nav_header_main.xml"
+        "merged": "/Users/davidrogers/.gradle/daemon/8.0/com.example.dhp2.app-mergeDebugResources-51:/layout/activity_sign_up.xml",
+        "source": "/Users/davidrogers/.gradle/daemon/8.0/com.example.dhp2.app-main-54:/layout/activity_sign_up.xml"
     },
     {
-        "merged": "com.example.dhp2.app-mergeDebugResources-51:/layout/activity_milestone.xml",
-        "source": "com.example.dhp2.app-main-54:/layout/activity_milestone.xml"
+        "merged": "/Users/davidrogers/.gradle/daemon/8.0/com.example.dhp2.app-mergeDebugResources-51:/layout/fragment_home.xml",
+        "source": "/Users/davidrogers/.gradle/daemon/8.0/com.example.dhp2.app-main-54:/layout/fragment_home.xml"
     },
     {
-        "merged": "com.example.dhp2.app-mergeDebugResources-51:/layout/activity_assessment.xml",
-        "source": "com.example.dhp2.app-main-54:/layout/activity_assessment.xml"
+        "merged": "/Users/davidrogers/.gradle/daemon/8.0/com.example.dhp2.app-mergeDebugResources-51:/layout/activity_main.xml",
+        "source": "/Users/davidrogers/.gradle/daemon/8.0/com.example.dhp2.app-main-54:/layout/activity_main.xml"
     },
     {
-        "merged": "com.example.dhp2.app-mergeDebugResources-51:/layout/content_main.xml",
-        "source": "com.example.dhp2.app-main-54:/layout/content_main.xml"
+        "merged": "/Users/davidrogers/.gradle/daemon/8.0/com.example.dhp2.app-mergeDebugResources-51:/layout/nav_header_main.xml",
+        "source": "/Users/davidrogers/.gradle/daemon/8.0/com.example.dhp2.app-main-54:/layout/nav_header_main.xml"
     },
     {
-        "merged": "com.example.dhp2.app-mergeDebugResources-51:/layout/activity_achievements.xml",
-        "source": "com.example.dhp2.app-main-54:/layout/activity_achievements.xml"
+        "merged": "/Users/davidrogers/.gradle/daemon/8.0/com.example.dhp2.app-mergeDebugResources-51:/layout/activity_assessment.xml",
+        "source": "/Users/davidrogers/.gradle/daemon/8.0/com.example.dhp2.app-main-54:/layout/activity_assessment.xml"
     },
     {
-        "merged": "com.example.dhp2.app-mergeDebugResources-51:/layout/login_page.xml",
-        "source": "com.example.dhp2.app-main-54:/layout/login_page.xml"
+        "merged": "/Users/davidrogers/.gradle/daemon/8.0/com.example.dhp2.app-mergeDebugResources-51:/layout/content_main.xml",
+        "source": "/Users/davidrogers/.gradle/daemon/8.0/com.example.dhp2.app-main-54:/layout/content_main.xml"
     },
     {
-        "merged": "com.example.dhp2.app-mergeDebugResources-51:/layout/fragment_home.xml",
-        "source": "com.example.dhp2.app-main-54:/layout/fragment_home.xml"
+        "merged": "/Users/davidrogers/.gradle/daemon/8.0/com.example.dhp2.app-mergeDebugResources-51:/layout/login_page.xml",
+        "source": "/Users/davidrogers/.gradle/daemon/8.0/com.example.dhp2.app-main-54:/layout/login_page.xml"
     },
     {
-        "merged": "com.example.dhp2.app-mergeDebugResources-51:/layout/activity_main.xml",
-        "source": "com.example.dhp2.app-main-54:/layout/activity_main.xml"
+        "merged": "/Users/davidrogers/.gradle/daemon/8.0/com.example.dhp2.app-mergeDebugResources-51:/layout/activity_milestone.xml",
+        "source": "/Users/davidrogers/.gradle/daemon/8.0/com.example.dhp2.app-main-54:/layout/activity_milestone.xml"
     },
     {
-        "merged": "com.example.dhp2.app-mergeDebugResources-51:/layout/activity_exercise.xml",
-        "source": "com.example.dhp2.app-main-54:/layout/activity_exercise.xml"
+        "merged": "/Users/davidrogers/.gradle/daemon/8.0/com.example.dhp2.app-mergeDebugResources-51:/layout/activity_exercise.xml",
+        "source": "/Users/davidrogers/.gradle/daemon/8.0/com.example.dhp2.app-main-54:/layout/activity_exercise.xml"
+    },
+    {
+        "merged": "/Users/davidrogers/.gradle/daemon/8.0/com.example.dhp2.app-mergeDebugResources-51:/layout/activity_achievements.xml",
+        "source": "/Users/davidrogers/.gradle/daemon/8.0/com.example.dhp2.app-main-54:/layout/activity_achievements.xml"
     }
 ]
