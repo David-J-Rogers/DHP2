@@ -1,5 +1,4 @@
 package com.example.dhp2;
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
@@ -15,7 +14,6 @@ import com.google.android.gms.common.SignInButton;
 import com.google.android.gms.tasks.Task;
 import com.google.android.gms.common.api.ApiException;
 import android.view.View;
-import android.database.Cursor;
 
 
 public class LoginActivity extends AppCompatActivity {
@@ -23,7 +21,6 @@ public class LoginActivity extends AppCompatActivity {
     private GoogleSignInClient mGoogleSignInClient;
     private EditText usernameEditText;
     private EditText passwordEditText;
-    private DBHelper dbHelper;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -58,10 +55,6 @@ public class LoginActivity extends AppCompatActivity {
             String password = passwordEditText.getText().toString();
 
             if (isValidCredentials(username, password)) {
-                // Navigate to MainActivity
-                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-                startActivity(intent);
-                finish();
             } else {
                 Toast.makeText(this, "Invalid credentials", Toast.LENGTH_SHORT).show();
             }
@@ -129,16 +122,18 @@ public class LoginActivity extends AppCompatActivity {
             Toast.makeText(this, "Sign in failed", Toast.LENGTH_SHORT).show();
         }
     }
-    @SuppressLint("Range")
     private boolean isValidCredentials(String username, String password) {
 
-        Cursor cursor = dbHelper.getPatient(username);
-        if (cursor.getCount() == 0) {
-            return false;
+        if (username.equals("") && password.equals("")) {
+            Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+            startActivity(intent);
+
+            finish();
+
+            return true;
         } else {
-            cursor.moveToFirst();
-            String passwordFromDB = cursor.getString(cursor.getColumnIndex("password"));
-            return password.equals(passwordFromDB);
+            Toast.makeText(this, "Invalid credentials", Toast.LENGTH_SHORT).show();
+            return false;
         }
     }
 
