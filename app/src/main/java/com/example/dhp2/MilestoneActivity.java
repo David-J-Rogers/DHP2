@@ -55,8 +55,9 @@ public class MilestoneActivity extends AppCompatActivity {
                     public void run() {
                         Intent intent = new Intent(MilestoneActivity.this, MainActivity.class);
                         startActivity(intent);
+                        finish();
                     }
-                }, 500);
+                }, 750);
             }
         });
 
@@ -103,6 +104,7 @@ public class MilestoneActivity extends AppCompatActivity {
                     intent.putExtra("randomExerciseNumber", randomExerciseNumber);
                     intent.putExtra("exerciseNumber", exerciseNumber);
                     startActivity(intent);
+                    finish();
                 } else {
                     Toast.makeText(MilestoneActivity.this, "Exercise " + exerciseNumber + " is locked.", Toast.LENGTH_SHORT).show();
                 }

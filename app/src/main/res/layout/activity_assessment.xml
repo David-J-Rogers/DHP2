@@ -3,7 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:padding="16dp"
+    android:id="@+id/assessmentLayout">
 
     <TextView
         android:id="@+id/questionTextView"
@@ -62,26 +63,12 @@
         android:padding="16dp"
         android:layout_marginBottom="16dp"/>
 
-    <!-- Buttons -->
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp">
+    <Button
+        android:id="@+id/completeButtonA"
+        android:layout_width="200dp"
+        android:layout_height="75dp"
+        android:text="Complete"
+        android:layout_gravity="center_horizontal"/>
 
-        <Button
-            android:id="@+id/backButtonA"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Back"
-            android:layout_alignParentStart="true"
-            android:layout_marginEnd="8dp"/>
 
-        <Button
-            android:id="@+id/completeButtonA"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Complete"
-            android:layout_alignParentEnd="true"/>
-
-    </RelativeLayout>
 </LinearLayout>

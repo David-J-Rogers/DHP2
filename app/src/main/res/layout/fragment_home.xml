@@ -27,7 +27,8 @@
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toBottomOf="@id/exerciseStatusTextView"
     app:layout_constraintEnd_toEndOf="parent"
-    android:text="Milestone 1" />
+    android:text="Milestone 1"
+    android:textSize="20sp"/>
 
     <Button
     android:layout_marginTop="16dp"
@@ -37,7 +38,8 @@
     app:layout_constraintTop_toBottomOf="@id/milestone1Button"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintEnd_toEndOf="parent"
-    android:text="Milestone 2" />
+    android:text="Milestone 2"
+    android:textSize="20sp"/>
 
     <Button
     android:layout_marginTop="16dp"
@@ -47,7 +49,8 @@
     app:layout_constraintTop_toBottomOf="@id/milestone2Button"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintEnd_toEndOf="parent"
-    android:text="Milestone 3" />
+    android:text="Milestone 3"
+    android:textSize="20sp"/>
 
     <Button
     android:layout_marginTop="16dp"
@@ -57,7 +60,8 @@
     app:layout_constraintTop_toBottomOf="@id/milestone3Button"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintEnd_toEndOf="parent"
-    android:text="Milestone 4" />
+    android:text="Milestone 4"
+    android:textSize="20sp"/>
 
 
 
