@@ -3486,9 +3486,13 @@ id matrix
 id message
 id middle
 id milestone1Button
+id milestone1ProgressBar
 id milestone2Button
+id milestone2ProgressBar
 id milestone3Button
+id milestone3ProgressBar
 id milestone4Button
+id milestone4ProgressBar
 id milestoneLayout
 id milestoneStatusTextView
 id mini

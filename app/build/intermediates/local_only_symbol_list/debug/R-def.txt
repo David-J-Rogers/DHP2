@@ -84,9 +84,13 @@ id fourRadioButton
 id google_sign_in_button
 id loginButton
 id milestone1Button
+id milestone1ProgressBar
 id milestone2Button
+id milestone2ProgressBar
 id milestone3Button
+id milestone3ProgressBar
 id milestone4Button
+id milestone4ProgressBar
 id milestoneLayout
 id milestoneStatusTextView
 id mobile_navigation

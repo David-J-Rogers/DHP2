@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -27,24 +28,42 @@ public final class FragmentHomeBinding implements ViewBinding {
   public final Button milestone1Button;
 
   @NonNull
+  public final ProgressBar milestone1ProgressBar;
+
+  @NonNull
   public final Button milestone2Button;
+
+  @NonNull
+  public final ProgressBar milestone2ProgressBar;
 
   @NonNull
   public final Button milestone3Button;
 
   @NonNull
+  public final ProgressBar milestone3ProgressBar;
+
+  @NonNull
   public final Button milestone4Button;
+
+  @NonNull
+  public final ProgressBar milestone4ProgressBar;
 
   private FragmentHomeBinding(@NonNull ConstraintLayout rootView,
       @NonNull TextView exerciseStatusTextView, @NonNull Button milestone1Button,
-      @NonNull Button milestone2Button, @NonNull Button milestone3Button,
-      @NonNull Button milestone4Button) {
+      @NonNull ProgressBar milestone1ProgressBar, @NonNull Button milestone2Button,
+      @NonNull ProgressBar milestone2ProgressBar, @NonNull Button milestone3Button,
+      @NonNull ProgressBar milestone3ProgressBar, @NonNull Button milestone4Button,
+      @NonNull ProgressBar milestone4ProgressBar) {
     this.rootView = rootView;
     this.exerciseStatusTextView = exerciseStatusTextView;
     this.milestone1Button = milestone1Button;
+    this.milestone1ProgressBar = milestone1ProgressBar;
     this.milestone2Button = milestone2Button;
+    this.milestone2ProgressBar = milestone2ProgressBar;
     this.milestone3Button = milestone3Button;
+    this.milestone3ProgressBar = milestone3ProgressBar;
     this.milestone4Button = milestone4Button;
+    this.milestone4ProgressBar = milestone4ProgressBar;
   }
 
   @Override
@@ -86,9 +105,21 @@ public final class FragmentHomeBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.milestone1ProgressBar;
+      ProgressBar milestone1ProgressBar = ViewBindings.findChildViewById(rootView, id);
+      if (milestone1ProgressBar == null) {
+        break missingId;
+      }
+
       id = R.id.milestone2Button;
       Button milestone2Button = ViewBindings.findChildViewById(rootView, id);
       if (milestone2Button == null) {
+        break missingId;
+      }
+
+      id = R.id.milestone2ProgressBar;
+      ProgressBar milestone2ProgressBar = ViewBindings.findChildViewById(rootView, id);
+      if (milestone2ProgressBar == null) {
         break missingId;
       }
 
@@ -98,14 +129,27 @@ public final class FragmentHomeBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.milestone3ProgressBar;
+      ProgressBar milestone3ProgressBar = ViewBindings.findChildViewById(rootView, id);
+      if (milestone3ProgressBar == null) {
+        break missingId;
+      }
+
       id = R.id.milestone4Button;
       Button milestone4Button = ViewBindings.findChildViewById(rootView, id);
       if (milestone4Button == null) {
         break missingId;
       }
 
+      id = R.id.milestone4ProgressBar;
+      ProgressBar milestone4ProgressBar = ViewBindings.findChildViewById(rootView, id);
+      if (milestone4ProgressBar == null) {
+        break missingId;
+      }
+
       return new FragmentHomeBinding((ConstraintLayout) rootView, exerciseStatusTextView,
-          milestone1Button, milestone2Button, milestone3Button, milestone4Button);
+          milestone1Button, milestone1ProgressBar, milestone2Button, milestone2ProgressBar,
+          milestone3Button, milestone3ProgressBar, milestone4Button, milestone4ProgressBar);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

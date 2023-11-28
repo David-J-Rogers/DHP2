@@ -1,11 +1,11 @@
 [
     {
-        "merged": "/Users/davidrogers/.gradle/daemon/8.0/com.example.dhp2.app-merged_res-52:/drawable_feedback_earned.png.flat",
-        "source": "/Users/davidrogers/.gradle/daemon/8.0/com.example.dhp2.app-main-54:/drawable/feedback_earned.png"
-    },
-    {
         "merged": "/Users/davidrogers/.gradle/daemon/8.0/com.example.dhp2.app-merged_res-52:/xml_backup_rules.xml.flat",
         "source": "/Users/davidrogers/.gradle/daemon/8.0/com.example.dhp2.app-main-54:/xml/backup_rules.xml"
+    },
+    {
+        "merged": "/Users/davidrogers/.gradle/daemon/8.0/com.example.dhp2.app-merged_res-52:/drawable_feedback_earned.png.flat",
+        "source": "/Users/davidrogers/.gradle/daemon/8.0/com.example.dhp2.app-main-54:/drawable/feedback_earned.png"
     },
     {
         "merged": "/Users/davidrogers/.gradle/daemon/8.0/com.example.dhp2.app-merged_res-52:/drawable_exercise20.jpg.flat",
@@ -156,8 +156,8 @@
         "source": "/Users/davidrogers/.gradle/daemon/8.0/com.example.dhp2.app-main-54:/drawable/exercise5.png"
     },
     {
-        "merged": "com.example.dhp2.app-merged_res-52:/layout_app_bar_main.xml.flat",
-        "source": "com.example.dhp2.app-main-54:/layout/app_bar_main.xml"
+        "merged": "com.example.dhp2.app-merged_res-52:/layout_fragment_home.xml.flat",
+        "source": "com.example.dhp2.app-main-54:/layout/fragment_home.xml"
     },
     {
         "merged": "/Users/davidrogers/.gradle/daemon/8.0/com.example.dhp2.app-merged_res-52:/drawable_exercise14.jpg.flat",

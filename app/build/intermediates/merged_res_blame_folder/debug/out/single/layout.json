@@ -1,9 +1,5 @@
 [
     {
-        "merged": "com.example.dhp2.app-mergeDebugResources-51:/layout/app_bar_main.xml",
-        "source": "com.example.dhp2.app-main-54:/layout/app_bar_main.xml"
-    },
-    {
         "merged": "/Users/davidrogers/.gradle/daemon/8.0/com.example.dhp2.app-mergeDebugResources-51:/layout/app_bar_main.xml",
         "source": "/Users/davidrogers/.gradle/daemon/8.0/com.example.dhp2.app-main-54:/layout/app_bar_main.xml"
     },
@@ -42,6 +38,10 @@
     {
         "merged": "/Users/davidrogers/.gradle/daemon/8.0/com.example.dhp2.app-mergeDebugResources-51:/layout/activity_exercise.xml",
         "source": "/Users/davidrogers/.gradle/daemon/8.0/com.example.dhp2.app-main-54:/layout/activity_exercise.xml"
+    },
+    {
+        "merged": "com.example.dhp2.app-mergeDebugResources-51:/layout/fragment_home.xml",
+        "source": "com.example.dhp2.app-main-54:/layout/fragment_home.xml"
     },
     {
         "merged": "/Users/davidrogers/.gradle/daemon/8.0/com.example.dhp2.app-mergeDebugResources-51:/layout/activity_achievements.xml",

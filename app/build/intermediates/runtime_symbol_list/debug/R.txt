@@ -3485,9 +3485,13 @@ int id matrix 0x7f080129
 int id message 0x7f08012a
 int id middle 0x7f08012b
 int id milestone1Button 0x7f08012c
+int id milestone1ProgressBar 0x7f08022b
 int id milestone2Button 0x7f08012d
+int id milestone2ProgressBar 0x7f08022e
 int id milestone3Button 0x7f08012e
+int id milestone3ProgressBar 0x7f080230
 int id milestone4Button 0x7f08012f
+int id milestone4ProgressBar 0x7f080232
 int id milestoneLayout 0x7f080130
 int id milestoneStatusTextView 0x7f080131
 int id mini 0x7f080132
