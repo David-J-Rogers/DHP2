@@ -7,32 +7,30 @@
     android:layout_height="match_parent"
     tools:context=".ui.home.HomeFragment" >
 
-    <TextView
-        android:id="@+id/text_home"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent" />
 
-    <!-- Add Exercise 1 Button -->
+    <TextView
+        android:id="@+id/exerciseStatusTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ready to make progress today?"
+        android:textSize="25sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
     <Button
+    android:layout_marginTop="16dp"
     android:id="@+id/milestone1Button"
     android:layout_width="375dp"
     android:layout_height="100dp"
-    app:layout_constraintTop_toTopOf="parent"
     app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/exerciseStatusTextView"
     app:layout_constraintEnd_toEndOf="parent"
     android:text="Milestone 1" />
 
-    <!-- Add Exercise 2 Button -->
     <Button
+    android:layout_marginTop="16dp"
     android:id="@+id/milestone2Button"
     android:layout_width="375dp"
     android:layout_height="100dp"
@@ -41,8 +39,8 @@
     app:layout_constraintEnd_toEndOf="parent"
     android:text="Milestone 2" />
 
-    <!-- Add Exercise 3 Button -->
     <Button
+    android:layout_marginTop="16dp"
     android:id="@+id/milestone3Button"
     android:layout_width="375dp"
     android:layout_height="100dp"
@@ -52,13 +50,14 @@
     android:text="Milestone 3" />
 
     <Button
-        android:id="@+id/milestone4Button"
-        android:layout_width="375dp"
-        android:layout_height="100dp"
-        app:layout_constraintTop_toBottomOf="@id/milestone3Button"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:text="Milestone 4" />
+    android:layout_marginTop="16dp"
+    android:id="@+id/milestone4Button"
+    android:layout_width="375dp"
+    android:layout_height="100dp"
+    app:layout_constraintTop_toBottomOf="@id/milestone3Button"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:text="Milestone 4" />
 
 
 

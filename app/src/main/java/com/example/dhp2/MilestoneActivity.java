@@ -1,12 +1,18 @@
 package com.example.dhp2;
+
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.os.Bundle;
-import android.app.Activity;
+import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
-import com.example.dhp2.ExerciseManager;
+
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
+
+import com.github.jinatonic.confetti.CommonConfetti;
 
 public class MilestoneActivity extends AppCompatActivity {
 
@@ -19,41 +25,38 @@ public class MilestoneActivity extends AppCompatActivity {
         Button exercise2Button = findViewById(R.id.exercise2Button);
         Button exercise3Button = findViewById(R.id.exercise3Button);
         Button assessButton = findViewById(R.id.assessButton);
-        ExerciseManager exerciseManager = ExerciseManager.getInstance(this);
+        Button doneButton = findViewById(R.id.doneButton);
 
-        exercise1Button.setOnClickListener(new View.OnClickListener() {
+        final ExerciseManager exerciseManager = ExerciseManager.getInstance(this);
+        int milestoneNumber = getIntent().getIntExtra("milestoneNumber", 1);
+
+        exercise1Button.setOnClickListener(createExerciseClickListener(milestoneNumber, 1, exerciseManager));
+        exercise2Button.setOnClickListener(createExerciseClickListener(milestoneNumber, 2, exerciseManager));
+        exercise3Button.setOnClickListener(createExerciseClickListener(milestoneNumber, 3, exerciseManager));
+
+        boolean isAssessmentCompleted = getPreferences(MODE_PRIVATE).getBoolean("assessmentCompleted", false);
+
+        if (isAssessmentCompleted) {
+            doneButton.setVisibility(View.VISIBLE);
+        } else {
+            doneButton.setVisibility(View.GONE);
+        }
+
+        doneButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MilestoneActivity.this, ExerciseActivity.class);
-                startActivity(intent);
-            }
-        });
+                triggerConfetti();
+                SharedPreferences.Editor editor = getPreferences(MODE_PRIVATE).edit();
+                editor.putBoolean("assessmentCompleted", false);
+                editor.apply();
 
-        exercise2Button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (exerciseManager.isExerciseUnlocked(2)) {
-                    int exerciseNumber = 2;
-                    Intent intent = new Intent(MilestoneActivity.this, ExerciseActivity.class);
-                    intent.putExtra("exerciseNumber", exerciseNumber);
-                    startActivity(intent);
-                } else {
-                    Toast.makeText(MilestoneActivity.this, "Exercise 2 is locked.", Toast.LENGTH_SHORT).show();
-                }
-            }
-        });
-
-        exercise3Button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (exerciseManager.isExerciseUnlocked(3)) {
-                    int exerciseNumber = 3;
-                    Intent intent = new Intent(MilestoneActivity.this, ExerciseActivity.class);
-                    intent.putExtra("exerciseNumber", exerciseNumber);
-                    startActivity(intent);
-                } else {
-                    Toast.makeText(MilestoneActivity.this, "Exercise 3 is locked.", Toast.LENGTH_SHORT).show();
-                }
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        Intent intent = new Intent(MilestoneActivity.this, MainActivity.class);
+                        startActivity(intent);
+                    }
+                }, 500);
             }
         });
 
@@ -61,13 +64,49 @@ public class MilestoneActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (exerciseManager.isExerciseUnlocked(4)) {
-                    Intent intent = new Intent(MilestoneActivity.this, AssessmentActivity.class);
+                    SharedPreferences.Editor editor = getPreferences(MODE_PRIVATE).edit();
+                    editor.putBoolean("assessmentCompleted", true);
+                    editor.apply();
+
+                    Intent intent = new Intent(MilestoneActivity.this, ExerciseActivity.class);
+                    int randomExerciseNumber = exerciseManager.generateRandomExerciseForMilestone(milestoneNumber);
+                    intent.putExtra("exerciseNumber", 4);
+                    intent.putExtra("randomExerciseNumber", randomExerciseNumber);
                     startActivity(intent);
                 } else {
-                    Toast.makeText(MilestoneActivity.this, "Assessment is locked.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MilestoneActivity.this, "Exercise 4 is locked.", Toast.LENGTH_SHORT).show();
                 }
             }
         });
+    }
 
+    private void triggerConfetti() {
+        ConstraintLayout container = findViewById(R.id.milestoneLayout);
+        Button doneButton = findViewById(R.id.doneButton);
+
+        int[] location = new int[2];
+        doneButton.getLocationOnScreen(location);
+        int x = location[0] + doneButton.getWidth() / 2;
+        int y = location[1] + doneButton.getHeight() / 2 - 250;
+        CommonConfetti.explosion(container, x, y, new int[]{Color.GREEN, Color.BLUE})
+                .oneShot();
+    }
+
+    private View.OnClickListener createExerciseClickListener(final int milestoneNumber, final int exerciseNumber, final ExerciseManager exerciseManager) {
+        return new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (exerciseManager.isExerciseUnlocked(exerciseNumber)) {
+                    int randomExerciseNumber = exerciseManager.generateRandomExerciseForMilestone(milestoneNumber);
+
+                    Intent intent = new Intent(MilestoneActivity.this, ExerciseActivity.class);
+                    intent.putExtra("randomExerciseNumber", randomExerciseNumber);
+                    intent.putExtra("exerciseNumber", exerciseNumber);
+                    startActivity(intent);
+                } else {
+                    Toast.makeText(MilestoneActivity.this, "Exercise " + exerciseNumber + " is locked.", Toast.LENGTH_SHORT).show();
+                }
+            }
+        };
     }
 }

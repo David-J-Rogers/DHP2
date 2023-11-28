@@ -26,14 +26,22 @@
         </activity>
         <activity
             android:name=".AssessmentActivity"
-            android:label="How did you feel today?">
+            android:label="">
         </activity>
         <activity
             android:name=".MilestoneActivity"
             android:label="">
         </activity>
 
+        <activity
+            android:name=".SignUpActivity"
+            android:label="">
+        </activity>
 
+        <activity
+            android:name=".AchievementActivity"
+            android:label="Achievements">
+        </activity>
 
         <activity
             android:name=".MainActivity"

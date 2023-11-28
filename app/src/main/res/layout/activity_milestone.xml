@@ -5,22 +5,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.home.HomeFragment" >
+    tools:context=".ui.home.HomeFragment"
+    android:id="@+id/milestoneLayout">
 
-    <!-- Text box at the top -->
     <TextView
         android:id="@+id/milestoneStatusTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Ready to complete milestone 1?"
+        android:text="Let's get started!"
         android:textSize="25sp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="16dp" />
 
-    <!-- Your existing buttons below -->
-    <!-- Add Exercise 1 Button -->
+
     <Button
         android:layout_marginTop="16dp"
         android:id="@+id/exercise1Button"
@@ -31,7 +30,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:text="Exercise 1" />
 
-    <!-- Add Exercise 2 Button -->
     <Button
         android:layout_marginTop="16dp"
         android:id="@+id/exercise2Button"
@@ -42,7 +40,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:text="Exercise 2" />
 
-    <!-- Add Exercise 3 Button -->
     <Button
         android:layout_marginTop="16dp"
         android:id="@+id/exercise3Button"
@@ -61,6 +58,20 @@
         app:layout_constraintTop_toBottomOf="@id/exercise3Button"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:text="Assessment" />
+        android:text="Exercise 4" />
+
+    <Button
+        android:id="@+id/doneButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Done for the day!"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="16dp"
+        />
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
