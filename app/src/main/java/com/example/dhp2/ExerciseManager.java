@@ -21,7 +21,7 @@ public class ExerciseManager {
     private ExerciseManager(Context context) {
         this.context = context;
         sharedPreferences = context.getSharedPreferences("ExerciseManager", Context.MODE_PRIVATE);
-
+        unlockExercise(1);
         for (int i = 2; i <= 4; i++) {
             sharedPreferences.edit().putBoolean("exercise" + i, false).apply();
         }

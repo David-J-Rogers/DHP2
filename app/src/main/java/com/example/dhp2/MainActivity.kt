@@ -111,7 +111,7 @@ class MainActivity : AppCompatActivity() {
 
         //DBTesting
         //setContentView(R.layout.activity_main);
-        testDatabase()
+        //testDatabase()
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -125,6 +125,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     //DBTesting
+    /*
     @SuppressLint("Range")
     private fun testDatabase() {
         val dbHelper = DBHelper(this)
@@ -151,5 +152,7 @@ class MainActivity : AppCompatActivity() {
         dbHelper.deletePatient(1)
         Log.d("DBTest", "Deletion completed")
     }
+
+     */
 
 }
